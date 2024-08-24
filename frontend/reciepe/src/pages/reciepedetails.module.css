@@ -1,0 +1,51 @@
+/* src/pages/RecipeDetailsPage.module.css */
+.recipeDetails {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .recipeTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .recipeInfo {
+    margin-bottom: 2rem;
+  }
+  
+  .recipeSection {
+    margin-bottom: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: #f4511e;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  
+  .button:hover {
+    background-color: #e64a19;
+  }
+  
+  .deleteButton {
+    background-color: #d32f2f;
+  }
+  
+  .deleteButton:hover {
+    background-color: #b71c1c;
+  }
