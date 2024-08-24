@@ -36,9 +36,12 @@ function RecipeDetailsPage() {
 
   const handleAddComment = async () => {
     try {
-      await axios.post(`http://localhost:8000/recipes/${id}/comment`, { content: newComment });
+      const response = await axios.post(`http://localhost:8000/recipes/${id}/comment`, { content: newComment });
       setNewComment('');
-      fetchComments();
+      // Update the recipe state with the new data
+      setRecipe(response.data);
+      // Add the new comment to the comments state
+      setComments(prevComments => [...prevComments, response.data.comments[response.data.comments.length - 1]]);
     } catch (error) {
       console.error('Error adding comment:', error);
     }
@@ -46,9 +49,9 @@ function RecipeDetailsPage() {
 
   const handleAddRating = async () => {
     try {
-      await axios.post(`http://localhost:8000/recipes/${id}/rate`, { rating: newRating });
+      const response = await axios.post(`http://localhost:8000/recipes/${id}/rate`, { rating: newRating });
       setNewRating(0);
-      fetchRecipe();
+      setRecipe(response.data);
     } catch (error) {
       console.error('Error adding rating:', error);
     }
@@ -91,13 +94,51 @@ function RecipeDetailsPage() {
           <h2 className={styles.sectionTitle}>Instructions</h2>
           <p>{recipe.instructions}</p>
         </div>
-        {/* ... (keep the rating, comment, and sharing sections) */}
+        
+        {/* Rating Section */}
+        <div className={styles.ratingSection}>
+          <h2 className={styles.sectionTitle}>Rate this Recipe</h2>
+          <input
+            type="number"
+            min="0"
+            max="5"
+            value={newRating}
+            onChange={(e) => setNewRating(Number(e.target.value))}
+          />
+          <button onClick={handleAddRating} className={styles.button}>Submit Rating</button>
+        </div>
+
+        {/* Comments Section */}
+        <div className={styles.commentsSection}>
+          <h2 className={styles.sectionTitle}>Comments</h2>
+          {comments.map((comment, index) => (
+            <div key={index} className={styles.comment}>
+              <p>{comment.content}</p>
+              <small>{new Date(comment.created_at).toLocaleString()}</small>
+            </div>
+          ))}
+          <div className={styles.addComment}>
+            <textarea
+              value={newComment}
+              onChange={(e) => setNewComment(e.target.value)}
+              placeholder="Add a comment..."
+            />
+            <button onClick={handleAddComment} className={styles.button}>Add Comment</button>
+          </div>
+        </div>
+
+        {/* Sharing Section */}
+        <div className={styles.sharingSection}>
+          <h2 className={styles.sectionTitle}>Share this Recipe</h2>
+          <button onClick={() => handleShare('Facebook')} className={styles.button}>Share on Facebook</button>
+          <button onClick={() => handleShare('Twitter')} className={styles.button}>Share on Twitter</button>
+        </div>
+
         <button onClick={() => navigate(`/recipes/${id}/edit`)} className={styles.button}>Edit Recipe</button>
         <button onClick={handleDelete} className={`${styles.button} ${styles.deleteButton}`}>Delete Recipe</button>
       </div>
     </div>
   );
 }
-
 
 export default RecipeDetailsPage;
