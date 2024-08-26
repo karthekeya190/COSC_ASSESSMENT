@@ -1,6 +1,6 @@
 /* src/components/RecipeCard.module.css */
 .recipeCard {
-    background-color: #3D1240; /* Slightly lighter purple for card background */
+    background: linear-gradient(to bottom, #3D0E40, #8F2150); /* Gradient from deep purple to dark pink */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 1.5rem;
@@ -26,20 +26,20 @@
 .recipeTitle {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
-    color: #7E3E3E; /* Warm orange/brown color */
+    color: #D77063; /* Bright pink color */
 }
 
 .recipeInfo {
     font-size: 0.9rem;
-    color: #D0B8B8; /* Light grayish pink for better contrast */
+    color: #F8877F; /* Coral color for better contrast */
     margin-bottom: 0.5rem;
 }
 
 .recipeLink {
     margin-top: auto;
     display: inline-block;
-    background-color: #7E3E3E; /* Warm orange/brown color */
-    color: white;
+    background-color: #F15864; /* Bright pink color */
+    color: #3D0E40; /* Deep purple for text */
     padding: 0.5rem 1rem;
     border-radius: 50px;
     text-decoration: none;
@@ -48,5 +48,6 @@
 }
 
 .recipeLink:hover {
-    background-color: #2D0A31; /* Dark purple on hover */
+    background-color: #F8877F; /* Coral color on hover */
+    color: #3D0E40; /* Deep purple text on hover */
 }

@@ -1,10 +1,10 @@
 /* src/index.css */
 :root {
-  --primary-color: #2D0A31; /* Dark purple */
-  --secondary-color: #7E3E3E; /* Warm orange/brown */
-  --background-color: #1A0517; /* Very dark purple for background */
+  --color-1: #4A0E4E; /* Darkest purple */
+  --color-2: #81305E; /* Dark rose */
+  --color-3: #C24D5C; /* Coral */
+  --color-4: #D77063; /* Light coral */
   --text-color: #FFFFFF; /* White text for better contrast */
-  --card-background: #3D1240; /* Slightly lighter purple for cards */
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -12,9 +12,11 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background: linear-gradient(to bottom, var(--color-1), var(--color-2), var(--color-3), var(--color-1));
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 .container {
@@ -30,13 +32,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--secondary-color);
+  color: var(--color-4);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--primary-color);
+  color: var(--color-1);
 }
 
 /* Custom scrollbar for webkit browsers */
@@ -45,14 +47,14 @@ a:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background-color);
+  background: var(--color-1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary-color);
+  background: var(--color-3);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
+  background: var(--color-4);
 }

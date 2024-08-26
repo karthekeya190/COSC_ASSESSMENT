@@ -1,67 +1,67 @@
 /* src/pages/CreateEditRecipePage.module.css */
 .form {
-    background: linear-gradient(135deg, #3D1240, #2D0A31);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 2rem;
-    margin-top: 2rem;
+  background: linear-gradient(135deg, #4A0E4E, #81305E);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin-top: 2rem;
 }
 
 .formTitle {
-    font-size: 2rem;
-    color: #7E3E3E; /* Warm orange/brown color */
-    margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #D77063; /* Light coral */
+  margin-bottom: 1.5rem;
 }
 
 .formGroup {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #D0B8B8; /* Light grayish pink for better contrast */
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #D77063; /* Light coral */
 }
 
 .input,
 .textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 2px solid #4D1A52; /* Slightly lighter purple for border */
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    background-color: rgba(61, 18, 64, 0.8); /* Semi-transparent lighter purple */
-    color: #FFFFFF; /* White text for better contrast */
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #81305E; /* Dark rose */
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: rgba(74, 14, 78, 0.8); /* Semi-transparent darkest purple */
+  color: #FFFFFF; /* White text for better contrast */
 }
 
 .input:focus,
 .textarea:focus {
-    outline: none;
-    border-color: #7E3E3E; /* Warm orange/brown color */
+  outline: none;
+  border-color: #C24D5C; /* Coral */
 }
 
 .textarea {
-    min-height: 150px;
-    resize: vertical;
+  min-height: 150px;
+  resize: vertical;
 }
 
 .submitButton {
-    display: inline-block;
-    background-color: #7E3E3E; /* Warm orange/brown color */
-    color: white;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
+  display: inline-block;
+  background-color: #C24D5C; /* Coral */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .submitButton:hover {
-    background-color: #2D0A31; /* Dark purple on hover */
-    transform: translateY(-2px);
+  background-color: #D77063; /* Light coral */
+  transform: translateY(-2px);
 }
