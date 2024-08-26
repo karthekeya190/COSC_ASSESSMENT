@@ -4,47 +4,47 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     padding: 2rem 0;
-  }
-  
-  .recipeCard {
-    background-color: var(--card-background);
+}
+
+.recipeCard {
+    background-color: #3D1240; /* Slightly lighter purple for card background */
     border-radius: 15px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 1.5rem;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-  }
-  
-  .recipeCard:hover {
+}
+
+.recipeCard:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .recipeTitle {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.recipeTitle {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
-  }
-  
-  .recipeInfo {
+    color: #7E3E3E; /* Warm orange/brown color */
+}
+
+.recipeInfo {
     font-size: 0.9rem;
-    color: #666;
+    color: #D0B8B8; /* Light grayish pink for better contrast */
     margin-bottom: 0.5rem;
-  }
-  
-  .recipeLink {
+}
+
+.recipeLink {
     margin-top: auto;
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: #7E3E3E; /* Warm orange/brown color */
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 50px;
     text-decoration: none;
     text-align: center;
     transition: all 0.3s ease;
-  }
-  
-  .recipeLink:hover {
-    background-color: var(--primary-color);
-  }
+}
+
+.recipeLink:hover {
+    background-color: #2D0A31; /* Dark purple on hover */
+}

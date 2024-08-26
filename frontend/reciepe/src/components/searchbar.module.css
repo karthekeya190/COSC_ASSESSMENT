@@ -4,45 +4,46 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .searchForm {
+}
+
+.searchForm {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     width: 100%;
     max-width: 800px;
-  }
-  
-  .inputGroup {
+}
+
+.inputGroup {
     flex: 1 1 200px;
     position: relative;
-  }
-  
-  .input {
+}
+
+.input {
     width: 100%;
     padding: 0.8rem 1rem;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #4D1A52; /* Slightly lighter purple for border */
     border-radius: 50px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    background-color: white;
-  }
-  
-  .input:focus {
+    background-color: #3D1240; /* Slightly lighter purple for background */
+    color: #FFFFFF; /* White text for better contrast */
+}
+
+.input:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
-  }
-  
-  .input::placeholder {
-    color: #aaa;
-  }
-  
-  .searchButton {
+    border-color: #7E3E3E; /* Warm orange/brown color */
+    box-shadow: 0 0 0 3px rgba(126, 62, 62, 0.2); /* Subtle glow effect */
+}
+
+.input::placeholder {
+    color: #D0B8B8; /* Light grayish pink for placeholder text */
+}
+
+.searchButton {
     padding: 0.8rem 2rem;
-    background-color: var(--primary-color);
+    background-color: #7E3E3E; /* Warm orange/brown color */
     color: white;
     border: none;
     border-radius: 50px;
@@ -50,27 +51,27 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .searchButton:hover {
-    background-color: var(--secondary-color);
+}
+
+.searchButton:hover {
+    background-color: #2D0A31; /* Dark purple on hover */
     transform: translateY(-2px);
-  }
-  
-  .searchIcon {
+}
+
+.searchIcon {
     margin-right: 0.5rem;
-  }
-  
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
     .searchForm {
-      flex-direction: column;
+        flex-direction: column;
     }
     
     .inputGroup {
-      width: 100%;
+        width: 100%;
     }
     
     .searchButton {
-      width: 100%;
+        width: 100%;
     }
-  }
+}

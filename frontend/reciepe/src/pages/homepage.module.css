@@ -1,25 +1,25 @@
 /* src/pages/HomePage.module.css */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #2D0A31, #7E3E3E);
     color: white;
     text-align: center;
     padding: 6rem 0;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  }
-  
-  .heroTitle {
+}
+
+.heroTitle {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease-out;
-  }
-  
-  .heroText {
+}
+
+.heroText {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     animation: fadeInUp 1s ease-out 0.5s both;
-  }
-  
-  .ctaButton {
+}
+
+.ctaButton {
     display: inline-block;
     background-color: white;
     color: var(--primary-color);
@@ -29,20 +29,20 @@
     font-weight: 600;
     transition: all 0.3s ease;
     animation: fadeInUp 1s ease-out 1s both;
-  }
-  
-  .ctaButton:hover {
+}
+
+.ctaButton:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  @keyframes fadeInUp {
+}
+
+@keyframes fadeInUp {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}

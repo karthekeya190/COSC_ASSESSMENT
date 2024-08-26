@@ -204,6 +204,9 @@ def get_recipe_comments(recipe_id: int, db: Session = Depends(get_db)):
     return comments
 
 # Sharing options (placeholder)
+class ShareRequest(BaseModel):
+    share_method: str
+
 @app.post("/recipes/{recipe_id}/share")
-def share_recipe(recipe_id: int, share_method: str):
-    return {"message": f"Recipe shared via {share_method}"}
+def share_recipe(recipe_id: int, request: ShareRequest):
+    return {"message": f"Recipe shared via {request.share_method}"}

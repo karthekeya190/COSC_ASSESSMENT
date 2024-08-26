@@ -1,11 +1,11 @@
 /* src/index.css */
 :root {
-  --primary-color: #ff6b6b;
-  --secondary-color: #4ecdc4;
-  --background-color: #f7f7f7;
-  --text-color: #2d3436;
-  --card-background: #ffffff;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --primary-color: #2D0A31; /* Dark purple */
+  --secondary-color: #7E3E3E; /* Warm orange/brown */
+  --background-color: #1A0517; /* Very dark purple for background */
+  --text-color: #FFFFFF; /* White text for better contrast */
+  --card-background: #3D1240; /* Slightly lighter purple for cards */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -22,4 +22,37 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
+}
+
+/* Additional styles for better readability */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
